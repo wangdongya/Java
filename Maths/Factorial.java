@@ -1,28 +1,27 @@
 package Maths;
 
-//change around 'n' for different factorial results
 public class Factorial {
+
+    /* Driver Code */
     public static void main(String[] args) {
-        int n = 5;
-        System.out.println(n + "! = " + factorial(n));
+        assert factorial(0) == 1;
+        assert factorial(1) == 1;
+        assert factorial(5) == 120;
+        assert factorial(10) == 3628800;
     }
 
-    //Factorial = n! = n1 * (n-1) * (n-2)*...1
-
     /**
-     * Calculate factorial N
+     * Calculate factorial N using iteration
      *
      * @param n the number
      * @return the factorial of {@code n}
      */
     public static long factorial(int n) {
         if (n < 0) {
-            throw new ArithmeticException("n < 0");     //Dont work with less than 0
+            throw new IllegalArgumentException("number is negative");
         }
-        long fac = 1;
-        for (int i = 1; i <= n; ++i) {
-            fac *= i;
-        }
-        return fac; //Return factorial
+        long factorial = 1;
+        for (int i = 1; i <= n; factorial *= i, ++i) ;
+        return factorial;
     }
 }

@@ -4,7 +4,13 @@ import java.util.*;
 
 public class RomanToInteger {
 
-    private static Map<Character, Integer> map = new HashMap<Character, Integer>() {{
+    private static Map<Character, Integer> map = new HashMap<Character, Integer>() {
+        /**
+        *
+        */
+        private static final long serialVersionUID = 87605733047260530L;
+
+        {
         put('I', 1);
         put('V', 5);
         put('X', 10);
@@ -23,6 +29,7 @@ public class RomanToInteger {
      */
     public static int romanToInt(String A) {
 
+        A = A.toUpperCase();
         char prev = ' ';
 
         int sum = 0;

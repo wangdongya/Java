@@ -1,6 +1,6 @@
 package Misc;
 
-public class heap_sort {
+public class HeapSort {
     public void sort(int[] arr) {
         int n = arr.length;
 
@@ -57,8 +57,7 @@ public class heap_sort {
     // Driver program
     public static void main(String args[]) {
         int arr[] = {12, 11, 13, 5, 6, 7};
-        int n = arr.length;
-
+        
         heap_sort ob = new heap_sort();
         ob.sort(arr);
 

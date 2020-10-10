@@ -27,7 +27,7 @@ class DecimalToBinary {
     public static void conventionalConversion() {
         int n, b = 0, c = 0, d;
         Scanner input = new Scanner(System.in);
-        System.out.printf("Conventional conversion.\n\tEnter the decimal number: ");
+        System.out.printf("Conventional conversion.%n Enter the decimal number: ");
         n = input.nextInt();
         while (n != 0) {
             d = n % 2;
@@ -35,6 +35,7 @@ class DecimalToBinary {
             n /= 2;
         } //converting decimal to binary
         System.out.println("\tBinary number: " + b);
+        input.close();
     }
 
     /**
@@ -45,7 +46,7 @@ class DecimalToBinary {
     public static void bitwiseConversion() {
         int n, b = 0, c = 0, d;
         Scanner input = new Scanner(System.in);
-        System.out.printf("Bitwise conversion.\n\tEnter the decimal number: ");
+        System.out.printf("Bitwise conversion.%n Enter the decimal number: ");
         n = input.nextInt();
         while (n != 0) {
             d = (n & 1);
